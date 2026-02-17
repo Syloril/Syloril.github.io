@@ -15,8 +15,9 @@ body {
     margin: 0;
 }
 
+
 .container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 2rem auto;
     padding: 0 20px;
 }
@@ -83,7 +84,7 @@ nav a {
 /* Project Cards */
 .project-card {
     background: var(--white);
-    padding: 2rem;
+    padding: 2.5rem; /* Increased padding for a larger feel */
     margin-bottom: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
@@ -100,88 +101,100 @@ nav a {
 
 .card-header h3 {
     margin: 0;
+    font-size: 1.5rem; /* Slightly larger title */
 }
 
 .project-comparison {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    grid-template-columns: 1fr 1.2fr; /* Gives the Enhanced side slightly more space */
+    gap: 40px;
     margin-top: 1rem;
 }
 
-/* Uniform Visual Styles */
+/* Visual Styles */
 .image-gallery {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     margin-bottom: 15px;
 }
 
-/* ensures all 3 screenshots are the same size */
+/* Portfolio Images */
 .portfolio-img {
-    width: 31%;
-    aspect-ratio: 9 / 16; 
-    object-fit: contain; 
-    background: #eee; 
-    border-radius: 4px;
+    flex: 1;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: contain;
+    background: #f1f5f9;
+    border-radius: 6px;
     border: 1px solid #ddd;
 }
 
-/* Standardizes single GIFs (Algorithms/Enhanced Weight Tracker) */
+/* GIFs */
 .portfolio-gif {
     width: 100%;
-    max-width: 350px;
-    aspect-ratio: 16 / 9; /* Standard widescreen ratio */
-    object-fit: cover; /* Fills the box cleanly */
+    max-width: 500px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
     display: block;
     margin: 0 auto 15px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Forces mobile app demo GIFs to maintain phone shape */
+/* Mobile Demo GIF */
 .project-card:first-of-type .portfolio-gif {
     aspect-ratio: 9 / 16;
-    max-width: 220px;
+    max-width: 280px;
 }
 
-/* Standardizes the side-by-side Database GIFs */
+/* Database gifs */
 .visual-flex {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     justify-content: center;
     margin-bottom: 15px;
 }
 
 .portfolio-gif-half {
     width: 48%;
-    aspect-ratio: 1 / 1; /* Square containers for dashboard previews */
+    aspect-ratio: 1 / 1;
     object-fit: cover;
-    border-radius: 6px;
+    border-radius: 8px;
     border: 1px solid #ddd;
 }
 
 /* Buttons */
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 24px; /* Larger button */
     border-radius: 6px;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
     transition: all 0.3s ease;
 }
 
 .btn:hover {
     opacity: 0.8;
-    transform: translateY(-1px);
+    transform: translateY(-2px);
 }
 
 .primary { background: var(--primary); color: white; }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .project-comparison { grid-template-columns: 1fr; }
     .card-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
 }
 
-footer { text-align: center; padding: 2rem; color: var(--secondary); }
+@media (max-width: 480px) {
+    .visual-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    .portfolio-gif-half {
+        width: 100%;
+    }
+}
+
+footer { text-align: center; padding: 3rem; color: var(--secondary); font-size: 0.9rem; }
