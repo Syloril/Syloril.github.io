@@ -84,10 +84,11 @@ nav a {
 /* Project Cards */
 .project-card {
     background: var(--white);
-    padding: 2.5rem; /* Increased padding for a larger feel */
+    padding: 2.5rem; 
     margin-bottom: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    overflow: hidden;
 }
 
 .card-header {
@@ -101,14 +102,19 @@ nav a {
 
 .card-header h3 {
     margin: 0;
-    font-size: 1.5rem; /* Slightly larger title */
+    font-size: 1.5rem;
 }
 
 .project-comparison {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr; /* Gives the Enhanced side slightly more space */
+    display: flex;
+    flex-wrap: wrap;
     gap: 40px;
-    margin-top: 1rem;
+    align-items: flex-start;
+}
+
+.artifact {
+    flex: 1;
+    min-width: 300px;
 }
 
 /* Visual Styles */
@@ -116,12 +122,13 @@ nav a {
     display: flex;
     gap: 12px;
     margin-bottom: 15px;
+    width: 100%;
 }
 
 /* Portfolio Images */
 .portfolio-img {
     flex: 1;
-    width: 100%;
+    width: 30%;
     aspect-ratio: 9 / 16;
     object-fit: contain;
     background: #f1f5f9;
@@ -166,7 +173,7 @@ nav a {
 /* Buttons */
 .btn {
     display: inline-block;
-    padding: 12px 24px; /* Larger button */
+    padding: 12px 24px; 
     border-radius: 6px;
     text-decoration: none;
     font-size: 1rem;
@@ -183,7 +190,8 @@ nav a {
 
 /* Responsive Adjustments */
 @media (max-width: 900px) {
-    .project-comparison { grid-template-columns: 1fr; }
+    .project-comparison { flex-direction: column; }
+    .artifact { width: 100%; }
     .card-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
 }
 
