@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enrique | Software Development ePortfolio</title>
+    <title>Enrique Gonzalez | Software Development ePortfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://www.linkedin.com/in/enrique-gonzalez-548a1521b/" target="_blank" rel="noopener noreferrer">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -27,57 +27,85 @@
         <p>Welcome to my professional portfolio. Below you will find a collection of my work focusing on software design, algorithms, and databases.</p>
     </section>
 
-    <section id="projects" class="container">
-        <h2>Technical Artifacts</h2>
 
-        <div class="project-card">
-            <h3>01. Software Design & Engineering</h3>
-            <div class="project-comparison">
-                <div class="artifact">
-                    <h4>Original</h4>
-                    <p>Initial implementation of [Project Name]. Focus on core functionality.</p>
-                    <a href="#" class="btn secondary">View Original</a>
-                </div>
-                <div class="artifact">
-                    <h4>Enhanced</h4>
-                    <p>Revised to improve UI/UX and modularity using [Language/Tool].</p>
-                    <a href="#" class="btn primary">View Enhanced</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <h3>02. Algorithms & Data Structures</h3>
-            <div class="project-comparison">
-                <div class="artifact">
-                    <h4>Original</h4>
-                    <p>placeholder</p>
-                    <a href="#" class="btn secondary">View Original</a>
-                </div>
-                <div class="artifact">
-                    <h4>Enhanced</h4>
-                    <p>placeholder.</p>
-                    <a href="#" class="btn primary">View Enhanced</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <h3>03. Databases</h3>
-            <div class="project-comparison">
-                <div class="artifact">
-                    <h4>Original</h4>
-                    <p>placeholder</p>
-                    <a href="#" class="btn secondary">View Original</a>
-                </div>
-                <div class="artifact">
-                    <h4>Enhanced</h4>
-                    <p>placeholder</p>
-                    <a href="#" class="btn primary">View Enhanced</a>
-                </div>
-            </div>
+    <section class="container">
+        <div class="skills-container">
+            <span class="skill-badge">Kotlin</span>
+            <span class="skill-badge">C++</span>
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">MongoDB</span>
+            <span class="skill-badge">SQLite</span>
+            <span class="skill-badge">Android Studio</span>
         </div>
     </section>
+
+    <section id="projects" class="container">
+    <h2>Technical Artifacts</h2>
+
+    <div class="project-card">
+        <div class="card-header">
+            <h3>01. Software Design & Engineering (Kotlin)</h3>
+            <a href="https://github.com/Syloril/Weight_Tracker" class="btn primary">View Repository</a>
+        </div>
+        
+        <div class="project-comparison">
+            <div class="artifact">
+                <h4>Original Version</h4>
+                <div class="image-gallery">
+                    <img src="assets/Original_login.png" alt="Original Login" class="portfolio-img">
+                    <img src="assets/Original_add_weight.png" alt="Original Entry" class="portfolio-img">
+                    <img src="assets/Original_add_weight_calendar.png" alt="Original List" class="portfolio-img">
+                </div>
+                <p>Initial build focusing on basic functionality and user interface, with no user authentication or database integration.</p>
+            </div>
+
+            <div class="artifact">
+                <h4>Enhanced Version</h4>
+                <img src="assets/App_showcase.gif" alt="Enhanced Features Demo" class="portfolio-gif">
+                <p>Updated with basic user authentication, SQLite integration, SMS notifications, and refined Kotlin logic.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <div class="card-header">
+            <h3>02. Algorithms & Data Structures (C++)</h3>
+            <a href="https://github.com/Syloril/Student_Courses_BST" class="btn primary">View Repository</a>
+        </div>
+        <div class="project-comparison">
+            <div class="artifact">
+                <h4>Original</h4>
+                <p>Initial implementation of a sorting algorithm with limited efficiency and standard error handling.</p>
+            </div>
+            <div class="artifact">
+                <h4>Enhanced</h4>
+                <img src="assets/BST_app.gif" alt="Algorithm Optimization Demo" class="portfolio-gif">
+                <p>Optimized C++ sorting algorithm for better memory management and computational complexity.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-card">
+    <div class="card-header">
+        <h3>03. Databases (MongoDB/Python)</h3>
+        <a href="https://github.com/Syloril/Data_Web_Dashboard" class="btn primary">View Repository</a>
+    </div>
+    <div class="project-comparison">
+        <div class="artifact">
+            <h4>Original</h4>
+            <p>Standard data import script using basic Python functionality to move records.</p>
+        </div>
+        <div class="artifact">
+            <h4>Enhanced</h4>
+            <div class="visual-flex">
+                <img src="assets/map_categories.gif" alt="MongoDB Structure" class="portfolio-gif-half">
+                <img src="assets/sidebar_filter_search.gif" alt="Dashboard Visualization" class="portfolio-gif-half">
+            </div>
+            <p>Enhanced Python dashboard utilizing MongoDB for advanced data filtering and real-time visualization of loan & lender data from Kiva.</p>
+        </div>
+    </div>
+</div>
+</section>
 
     <footer>
         <p>&copy; 2026 Enrique | Built with GitHub Pages</p>
