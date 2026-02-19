@@ -15,7 +15,6 @@ body {
     margin: 0;
 }
 
-
 .container {
     max-width: 1200px;
     margin: 2rem auto;
@@ -47,24 +46,56 @@ nav a {
     font-weight: 600; 
 }
 
-/* Skills Section */
+/* Introduction */
+.text-center {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.text-center h2 {
+    font-weight: 500;
+    color: var(--secondary);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.4;
+}
+
+/* Skills Row Alignment */
+.skills-row {
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+    margin-bottom: 3rem;
+    flex-wrap: nowrap; 
+}
+
+.skills-title {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--secondary);
+    line-height: 1; 
+}
+
 .skills-container {
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 3rem;
+    gap: 10px;
     flex-wrap: wrap;
+    align-items: center;
+    margin: 0; 
 }
 
 .skill-badge {
     background: var(--white);
-    padding: 8px 16px;
+    padding: 6px 14px;
     border-radius: 20px;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--primary);
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     border: 1px solid #e2e8f0;
+    display: inline-block;
 }
 
 /* Video Responsiveness */
@@ -125,7 +156,6 @@ nav a {
     width: 100%;
 }
 
-/* Portfolio Images */
 .portfolio-img {
     flex: 1;
     width: 30%;
@@ -136,7 +166,6 @@ nav a {
     border: 1px solid #ddd;
 }
 
-/* GIFs */
 .portfolio-gif {
     width: 100%;
     max-width: 500px;
@@ -148,13 +177,11 @@ nav a {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Mobile Demo GIF */
 .project-card:first-of-type .portfolio-gif {
     aspect-ratio: 9 / 16;
     max-width: 280px;
 }
 
-/* Database gifs */
 .visual-flex {
     display: flex;
     gap: 15px;
@@ -193,6 +220,14 @@ nav a {
     .project-comparison { flex-direction: column; }
     .artifact { width: 100%; }
     .card-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+}
+
+@media (max-width: 768px) {
+    .skills-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
 }
 
 @media (max-width: 480px) {
